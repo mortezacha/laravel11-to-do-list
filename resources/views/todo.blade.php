@@ -19,7 +19,7 @@
 
     <form class="form" method="POST" action="/create-todo">
         @csrf
-        <label for="text">Add new task</label>
+        <label for="text">Add new task: </label>
         <input type="text" class="input" name="text"/>
         <input type="submit" class="add" value="Add Task"/>
     </form>

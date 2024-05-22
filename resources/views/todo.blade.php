@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>To Do List</title>
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="{{asset('js/jquery-3.7.1.min.js')}}"></script>
@@ -19,6 +19,7 @@
 
     <form class="form" method="POST" action="/create-todo">
         @csrf
+        <label for="text">Add new task</label>
         <input type="text" class="input" name="text"/>
         <input type="submit" class="add" value="Add Task"/>
     </form>

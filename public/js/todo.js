@@ -1,9 +1,10 @@
 function deleteTodo(id) {
     $.get('deletetodoitem/'+id,
         function (response) {
-            $('.task[data-id="' + id + '"]').css('background-color', '#fbd0d0');
+            $('div[task-id="' + id + '"]').addClass('shadow  shadow-red-500');
             setTimeout(function () {
-                $('.task[data-id="' + id + '"]').remove();
+                $('div[task-id="' + id + '"]').siblings().remove();
+                $('div[task-id="' + id + '"]').remove();
             }, 423);
         })
         .fail(function (xhr, desc, err) {
@@ -15,10 +16,7 @@ function deleteTodo(id) {
 function checkToDo(id){
     $.get('checktodoitem/'+id,
         function (response) {
-            // $('.task[data-id="' + id + '"]').css('background-color', '#fbd0d0');
-            // setTimeout(function () {
-            //     $('.task[data-id="' + id + '"]').remove();
-            // }, 423);
+            $('div[task-id="' + id + '"]').addClass('line-through  bg-green-200');
            console.log('id'+id + ' has been checked')
         })
         .fail(function (xhr, desc, err) {

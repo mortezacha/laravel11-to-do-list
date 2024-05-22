@@ -28,7 +28,7 @@ class TodoController extends Controller
     public function checkItem($id)
     {
         $model = Todo::find($id);
-        $model->update(['status', 'true']);
+        $model->update(['status'=>'true']);
         return redirect('/');
     }
 

@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="{{asset('js/jquery-3.7.1.min.js')}}"></script>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
 <body>
 <div class="container">

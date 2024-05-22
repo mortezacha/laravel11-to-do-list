@@ -9,3 +9,4 @@ use App\Http\Controllers\TodoController;
 Route::get('/', [TodoController::class, 'show']);
 Route::post('/create-todo', [TodoController::class, 'create']);
 Route::get('/deletetodoitem/{id}', [TodoController::class, 'delete']);
+Route::get('/checktodoitem/{id}', [TodoController::class, 'checkItem']);

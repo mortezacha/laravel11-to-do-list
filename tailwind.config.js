@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+const { addDynamicIconSelectors } = require('@iconify/tailwind');
+
+/** @type {import('tailwindcss').Config} */
+
 export default {
     content: [
         "./resources/**/*.blade.php",
@@ -7,10 +11,16 @@ export default {
         "./node_modules/flowbite/**/*.js"
     ],
   theme: {
-    extend: {},
+    extend: {
+        zIndex: {
+            '1': '1',
+            '2': '2',
+        }
+    },
   },
     plugins: [
-        require('flowbite/plugin')
+        require('flowbite/plugin'),
+        addDynamicIconSelectors()
     ],
 }
 
